@@ -2,6 +2,18 @@
 # -*- coding: utf-8 -*-
 
 import os
+import argparse
+
+# Create a parser for args
+parser = argparse.ArgumentParser(description='Process torrents RAR\'s.')
+
+# Add an argument
+parser.add_argument('dir_arg', help='Directório a processar.')
+
+# Parse arguments
+args = parser.parse_args()
+
+print(args.dir_arg)
 
 dir_list = os.listdir(".")
 
